@@ -1,0 +1,82 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "labels.json — hand-labelled ground truth (Task 1.1)",
+  "description": "Schema for /tests/fixtures/labels.json. One entry per mix, each carrying its transition list. Loaded by both the Phase 0 notebook (rough subset) and the Phase 2 --eval harness (full set).",
+  "type": "object",
+  "required": ["schema_version", "mixes"],
+  "properties": {
+    "schema_version": { "type": "integer", "const": 1 },
+    "mixes": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/definitions/mix" }
+    }
+  },
+  "definitions": {
+    "mix": {
+      "type": "object",
+      "required": ["path", "sha256", "duration_s", "transitions"],
+      "properties": {
+        "path": {
+          "type": "string",
+          "description": "Path to the mix file, relative to the fixtures/mixes directory."
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$",
+          "description": "Hash of the file contents, so a mix swap or re-encode is caught rather than silently invalidating labels."
+        },
+        "duration_s": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "homogeneous_worst_case": {
+          "type": "boolean",
+          "default": false,
+          "description": "Task 1.3 — flags the deliberate minimal/industrial-techno set(s) so --eval can report gate performance on them separately."
+        },
+        "transitions": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/transition" }
+        }
+      }
+    },
+    "transition": {
+      "type": "object",
+      "required": ["start_s", "end_s", "center_s", "genre", "blend_style"],
+      "properties": {
+        "start_s": {
+          "type": "number",
+          "minimum": 0,
+          "description": "First frame where the incoming track becomes audible (blend start), or the cut point for a hard cut."
+        },
+        "end_s": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Last frame where the outgoing track is still audible (blend end). Equal to start_s for a hard cut."
+        },
+        "center_s": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Derived as (start_s + end_s) / 2. Stored (not computed on load) so the ±2s gate tolerance is applied against a fixed, auditable number."
+        },
+        "genre": {
+          "type": "string",
+          "description": "Free-text genre tag, e.g. 'techno', 'house', 'drum-and-bass'. Kept free-text since genre spread (Task 1.2) is assessed qualitatively, not via a fixed enum."
+        },
+        "blend_style": {
+          "type": "string",
+          "enum": ["long-blend", "short-blend", "hard-cut"],
+          "description": "long-blend: >=16 bars overlap. short-blend: <16 bars overlap. hard-cut: no overlap (start_s == end_s)."
+        },
+        "phrase_offset_bars_truth": {
+          "type": ["integer", "null"],
+          "minimum": 0,
+          "maximum": 31,
+          "default": null,
+          "description": "Ground truth for the phrase-offset-exact-match gate metric (base.md §Validation): a manual bar count, at labelling time, of where the incoming track's first downbeat lands relative to the outgoing track's 32-bar phrase grid. Null when the labeller couldn't determine it confidently (e.g. ambiguous phrase structure) — such transitions are excluded from the phrase-exact-match denominator rather than penalized."
+        }
+      }
+    }
+  }
+}

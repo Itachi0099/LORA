@@ -1,0 +1,17 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Node / UI
+ui/node_modules/
+ui/dist/
+ui/tsconfig.tsbuildinfo
+
+# OS
+.DS_Store

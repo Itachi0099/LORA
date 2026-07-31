@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "source": {
+    "path": "/Users/saurav/mixes/warehouse-2026-07.wav",
+    "duration_s": 4382.6,
+    "sample_rate": 44100,
+    "sha256": "9f2c1ae4b7d3f08c5e6a1b2c3d4e5f60718293a4b5c6d7e8f90a1b2c3d4e5f607"
+  },
+  "mix": {
+    "integrated_lufs": -8.2,
+    "true_peak_dbtp": 0.4,
+    "clipped_samples": 1832,
+    "tempo_median_bpm": 138.0,
+    "tempo_drift_bpm": 2.1
+  },
+  "transitions": [
+    {
+      "index": 1,
+      "at_s": 412.8,
+      "at_bar": 178,
+      "overlap_bars": 32,
+      "phrase_offset_bars": 0,
+      "peak_dbtp": -0.9,
+      "clipped_samples": 0,
+      "lufs_delta": 1.4,
+      "low_band_sum_db": 1.1,
+      "dead_air_ms": 0,
+      "abruptness": 0.22,
+      "confidence": 0.91,
+      "flags": []
+    },
+    {
+      "index": 2,
+      "at_s": 738.0,
+      "at_bar": 402,
+      "overlap_bars": 8,
+      "phrase_offset_bars": 11,
+      "peak_dbtp": -1.2,
+      "clipped_samples": 0,
+      "lufs_delta": 0.8,
+      "low_band_sum_db": 0.4,
+      "dead_air_ms": 0,
+      "abruptness": 0.41,
+      "confidence": 0.83,
+      "flags": ["off_phrase"]
+    },
+    {
+      "index": 3,
+      "at_s": 1180.5,
+      "at_bar": 642,
+      "overlap_bars": 16,
+      "phrase_offset_bars": 0,
+      "peak_dbtp": -0.6,
+      "clipped_samples": 0,
+      "lufs_delta": 1.9,
+      "low_band_sum_db": 4.8,
+      "dead_air_ms": 0,
+      "abruptness": 0.28,
+      "confidence": 0.88,
+      "flags": ["bass_stacking"]
+    },
+    {
+      "index": 4,
+      "at_s": 1445.2,
+      "at_bar": 786,
+      "overlap_bars": 0,
+      "phrase_offset_bars": 0,
+      "peak_dbtp": -0.3,
+      "clipped_samples": 0,
+      "lufs_delta": 2.2,
+      "low_band_sum_db": 0.0,
+      "dead_air_ms": 0,
+      "abruptness": 0.82,
+      "confidence": 0.79,
+      "flags": ["hard_cut"]
+    },
+    {
+      "index": 5,
+      "at_s": 3093.0,
+      "at_bar": 1682,
+      "overlap_bars": 24,
+      "phrase_offset_bars": 16,
+      "peak_dbtp": 0.4,
+      "clipped_samples": 312,
+      "lufs_delta": 3.6,
+      "low_band_sum_db": 2.1,
+      "dead_air_ms": 0,
+      "abruptness": 0.35,
+      "confidence": 0.9,
+      "flags": ["clipping", "level_jump"]
+    }
+  ],
+  "warnings": [
+    "tempo grid unstable between 1820s and 1960s, transitions in this range are low confidence"
+  ]
+}
