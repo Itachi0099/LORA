@@ -1,8 +1,10 @@
 # Task 3.7 — Match-accuracy gate (second kill gate)
 
+- [ ] Todo
+
 **Phase:** 3 — Streaming app connectivity (deferred, see [phase-3/README.md](README.md))
 **Source:** User decision 2026-08-01 (full OAuth account linking) · [base.md](../../base.md) §1
-**Status:** todo
+**Status:** todo — deferred, see phase-3/README.md
 **Depends on:** 3.4, 3.6
 
 ## Objective

@@ -1,5 +1,7 @@
 # Task 0.4 — Create prototype notebook
 
+- [x] Done
+
 **Phase:** 0 — Environment & notebook prototype
 **Source:** [TASKS.md](../../TASKS.md) · [base.md](../../base.md) §7 Step 0
 **Status:** done

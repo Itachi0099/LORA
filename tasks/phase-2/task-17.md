@@ -1,8 +1,10 @@
 # Task 2.17 — Record gate numbers in the README
 
+- [ ] Partial
+
 **Phase:** 2 — Detection to gate (Step 2)
 **Source:** [TASKS.md](../../TASKS.md) · [base.md](../../base.md) §Validation
-**Status:** blocked (needs Phase 1 ground-truth set — labels.json)
+**Status:** partial — README.md gate-status section scaffolded, real numbers blocked
 **Depends on:** 2.15, 2.16
 
 ## Objective

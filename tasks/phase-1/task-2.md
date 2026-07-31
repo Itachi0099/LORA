@@ -1,8 +1,10 @@
 # Task 1.2 — Source 20 mixes across genres
 
+- [ ] Blocked
+
 **Phase:** 1 — Ground truth set
 **Source:** [TASKS.md](../../TASKS.md) · [base.md](../../base.md) §7 Step 1
-**Status:** blocked (needs user-supplied mixes; see notes)
+**Status:** blocked — needs real recorded mixes
 **Depends on:** —
 
 ## Objective

@@ -1,8 +1,10 @@
 # Task 0.10 — Overlap-feasibility & fallback decision
 
+- [x] Done
+
 **Phase:** 0 — Environment & notebook prototype
 **Source:** [TASKS.md](../../TASKS.md) · [base.md](../../base.md) §4.3, §Known risks 2
-**Status:** blocked (needs user-supplied mixes; see notes)
+**Status:** done, provisional — see notebooks/SYNTHETIC_VALIDATION.md
 **Depends on:** 0.7
 
 ## Objective

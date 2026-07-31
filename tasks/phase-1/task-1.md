@@ -1,5 +1,7 @@
 # Task 1.1 — Define the label schema
 
+- [x] Done
+
 **Phase:** 1 — Ground truth set
 **Source:** [TASKS.md](../../TASKS.md) · [base.md](../../base.md) §7 Step 1, §Validation
 **Status:** done

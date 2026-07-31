@@ -1,8 +1,10 @@
 # Task 0.6 — Hand-label the 3 prototype mixes
 
+- [x] Done
+
 **Phase:** 0 — Environment & notebook prototype
 **Source:** [TASKS.md](../../TASKS.md) · [base.md](../../base.md) §7 Step 0
-**Status:** blocked (needs user-supplied mixes; see notes)
+**Status:** done — programmatic ground truth on the synthetic stand-in, not by-ear labelling
 **Depends on:** 0.5
 
 ## Objective

@@ -1,8 +1,10 @@
 # Task 3.4 — Extend the report schema with streaming matches
 
+- [ ] Todo
+
 **Phase:** 3 — Streaming app connectivity (deferred, see [phase-3/README.md](README.md))
 **Source:** User decision 2026-08-01 (full OAuth account linking) · [base.md](../../base.md) §5.1
-**Status:** todo
+**Status:** todo — deferred, see phase-3/README.md
 **Depends on:** 3.1, 3.3
 
 ## Objective

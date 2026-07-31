@@ -1,8 +1,10 @@
 # Task 1.3 — Include the homogeneous worst case
 
+- [ ] Blocked
+
 **Phase:** 1 — Ground truth set
 **Source:** [TASKS.md](../../TASKS.md) · [base.md](../../base.md) §Known risks 1
-**Status:** blocked (needs user-supplied mixes; see notes)
+**Status:** blocked — needs real recorded mixes
 **Depends on:** 1.2
 
 ## Objective

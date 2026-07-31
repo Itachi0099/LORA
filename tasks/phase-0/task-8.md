@@ -1,8 +1,10 @@
 # Task 0.8 — Prototype ruptures changepoint detection
 
+- [x] Done
+
 **Phase:** 0 — Environment & notebook prototype
 **Source:** [TASKS.md](../../TASKS.md) · [base.md](../../base.md) §4.2-B
-**Status:** blocked (needs user-supplied mixes; see notes)
+**Status:** done — see notebooks/SYNTHETIC_VALIDATION.md
 **Depends on:** 0.7
 
 ## Objective

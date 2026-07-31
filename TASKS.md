@@ -23,20 +23,26 @@ measures them.
 
 Goal: prove detection is possible on a handful of mixes *before* writing any package code.
 
-- [ ] **0.1** Create Python project env; pin `madmom` and a compatible Python version early
+**0.5–0.10 completed via a synthetic stand-in** (`scripts/synth_mixes.py`), not real
+recorded mixes — copyright/ToS exposure ruled out sourcing real mixes automatically.
+Ground truth is programmatic (exact by construction), not by-ear labelling. Full
+results: [`notebooks/SYNTHETIC_VALIDATION.md`](notebooks/SYNTHETIC_VALIDATION.md).
+Real recorded mixes are still required for Task 1.2 and are not superseded by this.
+
+- [x] **0.1** Create Python project env; pin `madmom` and a compatible Python version early
       — madmom install friction is Known Risk 5. Budget a `librosa`/`basic_pitch` beat-tracking
       fallback if the pin fights the interpreter.
-- [ ] **0.2** Verify `ffmpeg` is on PATH and can decode WAV/FLAC/MP3/AIFF.
-- [ ] **0.3** Install analysis deps: `librosa`, `numpy`, `ruptures`, `madmom`, `scipy`, notebook stack.
-- [ ] **0.4** Create `/notebooks/01-segmentation-prototype.ipynb`.
-- [ ] **0.5** Acquire 3 mixes spanning blend styles (one long techno blend, one house, one hard-cut set).
-- [ ] **0.6** Hand-label transition **times** for the 3 mixes (rough is fine at this stage).
-- [ ] **0.7** Prototype: decode → stacked feature matrix (MFCC + spectral contrast + band RMS)
+- [x] **0.2** Verify `ffmpeg` is on PATH and can decode WAV/FLAC/MP3/AIFF.
+- [x] **0.3** Install analysis deps: `librosa`, `numpy`, `ruptures`, `madmom`, `scipy`, notebook stack.
+- [x] **0.4** Create `/notebooks/01-segmentation-prototype.ipynb`.
+- [x] **0.5** Acquire 3 mixes spanning blend styles (one long techno blend, one house, one hard-cut set).
+- [x] **0.6** Hand-label transition **times** for the 3 mixes (rough is fine at this stage).
+- [x] **0.7** Prototype: decode → stacked feature matrix (MFCC + spectral contrast + band RMS)
       → Foote novelty. Eyeball peaks against labels.
-- [ ] **0.8** Prototype: `ruptures` PELT + RBF changepoints on the same feature stream.
-- [ ] **0.9** Prototype the homogeneous worst case (minimal/industrial techno) — Known Risk 1.
+- [x] **0.8** Prototype: `ruptures` PELT + RBF changepoints on the same feature stream.
+- [x] **0.9** Prototype the homogeneous worst case (minimal/industrial techno) — Known Risk 1.
       Confirm *any* usable feature contrast survives before committing to the approach.
-- [ ] **0.10** Overlap-feasibility decision (Known Risk 2): can overlap boundaries be recovered
+- [x] **0.10** Overlap-feasibility decision (Known Risk 2): can overlap boundaries be recovered
       from timbre stabilisation? **Decide the fallback now** — points-only + drop `overlap_bars` —
       not after it fails downstream.
 
@@ -46,7 +52,7 @@ Goal: prove detection is possible on a handful of mixes *before* writing any pac
 
 Goal: the single most valuable artefact in the project. Everything is measured against this.
 
-- [ ] **1.1** Define the label schema: per transition `start_s`, `end_s`, derived `center_s`,
+- [x] **1.1** Define the label schema: per transition `start_s`, `end_s`, derived `center_s`,
       plus `genre` and `blend_style` tags. Per mix: path, `sha256`, duration.
 - [ ] **1.2** Source 20 mixes with genre/style spread: long techno blends, house, short-blend
       drum & bass, hard cuts.
@@ -65,43 +71,43 @@ Goal: build `/analyzer/detect/` (+ its feature and validation dependencies) unti
 
 ### 2a. Scaffolding & feature extraction (§4.1)
 
-- [ ] **2.1** Scaffold repo per §6: `pyproject.toml`, `/analyzer/{__init__,config,io}.py`,
+- [x] **2.1** Scaffold repo per §6: `pyproject.toml`, `/analyzer/{__init__,config,io}.py`,
       `/analyzer/features/`, `/analyzer/detect/`, `/analyzer/score/phrase.py`, `/tests/`.
-- [ ] **2.2** `config.py`: hop size 512, sample rates (22050 mono analysis / 44.1k stereo handle),
+- [x] **2.2** `config.py`: hop size 512, sample rates (22050 mono analysis / 44.1k stereo handle),
       feature params, detector penalties/thresholds — documented as opinions, single source of truth.
-- [ ] **2.3** `io.py`: ffmpeg decode to 22050 Hz mono; retain a stereo 44.1k handle for width;
+- [x] **2.3** `io.py`: ffmpeg decode to 22050 Hz mono; retain a stereo 44.1k handle for width;
       handle WAV/FLAC/MP3/AIFF; compute source `sha256` + duration.
-- [ ] **2.4** `features/timbre.py`: MFCC (20 coeff) + deltas; spectral contrast.
-- [ ] **2.5** `features/rhythm.py`: madmom `DBNDownBeatTracker` beats + downbeats; windowed tempo curve.
+- [x] **2.4** `features/timbre.py`: MFCC (20 coeff) + deltas; spectral contrast.
+- [x] **2.5** `features/rhythm.py`: madmom `DBNDownBeatTracker` beats + downbeats; windowed tempo curve.
       Wire the fallback beat tracker from 0.1 behind the same interface.
-- [ ] **2.6** `features/spectral.py`: band RMS (low/mid/high); stereo width (mid/side ratio).
-- [ ] **2.7** Add Chroma CENS to the feature set (weak but non-zero harmonic cue).
+- [x] **2.6** `features/spectral.py`: band RMS (low/mid/high); stereo width (mid/side ratio).
+- [x] **2.7** Add Chroma CENS to the feature set (weak but non-zero harmonic cue).
 
 ### 2b. Candidate detection (§4.2)
 
-- [ ] **2.8** `detect/novelty.py`: Foote novelty over stacked MFCC + spectral contrast + band RMS;
+- [x] **2.8** `detect/novelty.py`: Foote novelty over stacked MFCC + spectral contrast + band RMS;
       checkerboard kernel ≈ 16 bars; adaptive-threshold peak picking. Expose peak prominence.
-- [ ] **2.9** `detect/changepoint.py`: `ruptures` PELT with RBF cost; penalty read from config.
-- [ ] **2.10** `detect/merge.py`: union both detectors; collapse candidates within 8 bars;
+- [x] **2.9** `detect/changepoint.py`: `ruptures` PELT with RBF cost; penalty read from config.
+- [x] **2.10** `detect/merge.py`: union both detectors; collapse candidates within 8 bars;
       assign `confidence` from detector agreement + peak prominence.
 
 ### 2c. Overlap & phrase (§4.3, §4.4 — gate-measured)
 
-- [ ] **2.11** `detect/overlap.py`: from each candidate peak, search outward to last stable outgoing
+- [x] **2.11** `detect/overlap.py`: from each candidate peak, search outward to last stable outgoing
       / first stable incoming timbre frame; span → `overlap_bars` via downbeat grid.
       Implement the points-only fallback path decided in 0.10.
-- [ ] **2.12** `score/phrase.py`: build outgoing 32-bar (4/4) phrase grid; compute
+- [x] **2.12** `score/phrase.py`: build outgoing 32-bar (4/4) phrase grid; compute
       `phrase_offset_bars = incoming_first_downbeat_bar mod 32`. Report the number, no verdict.
 
 ### 2d. Validation harness & tuning
 
-- [ ] **2.13** Eval module: match candidates ↔ labels within ±2s; compute recall, precision,
+- [x] **2.13** Eval module: match candidates ↔ labels within ±2s; compute recall, precision,
       overlap-length median error (bars), phrase-offset exact-match rate.
-- [ ] **2.14** Minimal `--eval` path (CLI or notebook) that runs against `labels.json` and prints
+- [x] **2.14** Minimal `--eval` path (CLI or notebook) that runs against `labels.json` and prints
       the four gate metrics.
 - [ ] **2.15** Tune changepoint penalty + novelty threshold on the validation set. Bias toward
       **recall** — false negatives are worse than false positives here.
-- [ ] **2.16** Tests: `test_detect.py` (detection + merge), `test_phrase.py` (offset math).
+- [x] **2.16** Tests: `test_detect.py` (detection + merge), `test_phrase.py` (offset math).
 - [ ] **2.17** Record the four gate numbers in the README; re-run `--eval` on every detection change.
 
 ### Gate check

@@ -1,5 +1,7 @@
 # Task 2.12 — `score/phrase.py`: phrase offset
 
+- [x] Done
+
 **Phase:** 2 — Detection to gate (Step 2)
 **Source:** [TASKS.md](../../TASKS.md) · [base.md](../../base.md) §4.4
 **Status:** done

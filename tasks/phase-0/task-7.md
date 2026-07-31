@@ -1,8 +1,10 @@
 # Task 0.7 — Prototype Foote novelty detection
 
+- [x] Done
+
 **Phase:** 0 — Environment & notebook prototype
 **Source:** [TASKS.md](../../TASKS.md) · [base.md](../../base.md) §4.1, §4.2-A
-**Status:** blocked (needs user-supplied mixes; see notes)
+**Status:** done — see notebooks/SYNTHETIC_VALIDATION.md
 **Depends on:** 0.4, 0.6
 
 ## Objective

@@ -1,5 +1,7 @@
 # Task 2.5 — `features/rhythm.py`: beats, downbeats, tempo curve
 
+- [x] Done
+
 **Phase:** 2 — Detection to gate (Step 2)
 **Source:** [TASKS.md](../../TASKS.md) · [base.md](../../base.md) §4.1, §4.4
 **Status:** done

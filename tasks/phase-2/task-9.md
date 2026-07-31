@@ -1,5 +1,7 @@
 # Task 2.9 — `detect/changepoint.py`: `ruptures` PELT + RBF
 
+- [x] Done
+
 **Phase:** 2 — Detection to gate (Step 2)
 **Source:** [TASKS.md](../../TASKS.md) · [base.md](../../base.md) §4.2-B
 **Status:** done

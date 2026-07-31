@@ -1,8 +1,10 @@
 # Task 1.4 — Hand-label all 20 mixes (start + end)
 
+- [ ] Blocked
+
 **Phase:** 1 — Ground truth set
 **Source:** [TASKS.md](../../TASKS.md) · [base.md](../../base.md) §7 Step 1, §Validation
-**Status:** blocked (needs user-supplied mixes; see notes)
+**Status:** blocked — needs real recorded mixes
 **Depends on:** 1.1, 1.2
 
 ## Objective

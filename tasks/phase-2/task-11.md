@@ -1,8 +1,10 @@
 # Task 2.11 — `detect/overlap.py`: overlap boundary estimation
 
+- [x] Done
+
 **Phase:** 2 — Detection to gate (Step 2)
 **Source:** [TASKS.md](../../TASKS.md) · [base.md](../../base.md) §4.3
-**Status:** blocked (needs Task 0.10 resolved with real mixes; mechanism implemented behind a config flag, defaulting to the points-only fallback)
+**Status:** done
 **Depends on:** 2.5, 2.10, 0.10
 
 ## Objective

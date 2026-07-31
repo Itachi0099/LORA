@@ -49,20 +49,20 @@ strongly here:
 
 ## Task list
 
-- **3.1** — Decide provider(s), auth grant type, and which of the two "linking"
+- [ ] **3.1** — Decide provider(s), auth grant type, and which of the two "linking"
   features (enrichment vs. export) is actually being built first.
-- **3.2** — Design token storage (OS keychain via Tauri) and scope minimization
+- [ ] **3.2** — Design token storage (OS keychain via Tauri) and scope minimization
   (read-only search/metadata scopes unless export is in scope).
-- **3.3** — Prototype the OAuth flow against the single provider chosen in 3.1,
+- [ ] **3.3** — Prototype the OAuth flow against the single provider chosen in 3.1,
   outside the main app, before wiring it into anything.
-- **3.4** — Extend the `<mixname>.analysis.json` schema (base.md §5.1) with an
+- [ ] **3.4** — Extend the `<mixname>.analysis.json` schema (base.md §5.1) with an
   optional per-transition block for matched streaming metadata — additive, so
   existing local-only consumers of the schema don't break.
-- **3.5** — Wire the matched metadata into the existing Tauri frontend
+- [ ] **3.5** — Wire the matched metadata into the existing Tauri frontend
   (`ui/src/types.ts`'s `AnalysisReport` contract) as an optional rendered field.
-- **3.6** — Privacy/security pass: token revocation path, what happens offline/without
+- [ ] **3.6** — Privacy/security pass: token revocation path, what happens offline/without
   a linked account (must degrade to today's fully-local behavior, not require login).
-- **3.7** — Re-evaluate: does fingerprint/metadata match accuracy across real mixes
+- [ ] **3.7** — Re-evaluate: does fingerprint/metadata match accuracy across real mixes
   justify shipping this, or does it produce enough wrong matches to undermine the
   "only report what a DJ can verify by ear in five seconds" principle (base.md §1)?
 

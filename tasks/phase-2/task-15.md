@@ -1,8 +1,10 @@
 # Task 2.15 — Tune detector penalty/threshold, biased toward recall
 
+- [ ] Blocked
+
 **Phase:** 2 — Detection to gate (Step 2)
 **Source:** [TASKS.md](../../TASKS.md) · [base.md](../../base.md) §Validation
-**Status:** blocked (needs Phase 1 ground-truth set — labels.json)
+**Status:** blocked — needs real ground truth to tune against
 **Depends on:** 2.14
 
 ## Objective

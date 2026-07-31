@@ -1,5 +1,7 @@
 # Task 2.13 — Eval module: gate metrics
 
+- [x] Done
+
 **Phase:** 2 — Detection to gate (Step 2)
 **Source:** [TASKS.md](../../TASKS.md) · [base.md](../../base.md) §Validation
 **Status:** done

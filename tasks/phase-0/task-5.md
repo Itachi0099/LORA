@@ -1,8 +1,10 @@
 # Task 0.5 — Acquire 3 prototype mixes
 
+- [x] Done
+
 **Phase:** 0 — Environment & notebook prototype
 **Source:** [TASKS.md](../../TASKS.md) · [base.md](../../base.md) §7 Step 0
-**Status:** blocked (needs user-supplied mixes; see notes)
+**Status:** done — synthetic stand-in (scripts/synth_mixes.py), real recorded mixes still pending
 **Depends on:** —
 
 ## Objective

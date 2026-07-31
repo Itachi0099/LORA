@@ -1,5 +1,7 @@
 # Task 2.8 — `detect/novelty.py`: Foote self-similarity novelty
 
+- [x] Done
+
 **Phase:** 2 — Detection to gate (Step 2)
 **Source:** [TASKS.md](../../TASKS.md) · [base.md](../../base.md) §4.2-A
 **Status:** done

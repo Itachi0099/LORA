@@ -3,10 +3,12 @@
 Post-set transition analysis for DJ mixes. See [base.md](base.md) for the full spec and
 [TASKS.md](TASKS.md) for the task breakdown through the detection kill gate.
 
-**Status:** Phase 2 (`/analyzer/detect/`) implemented against synthetic test data.
-Gate metrics below are **not yet measured** — that requires the Phase 1 ground-truth
-set (`tests/fixtures/labels.json`), which needs real recorded mixes and hand-labelling
-(tracked in `tasks/phase-0/` and `tasks/phase-1/`, currently blocked on sourcing audio).
+**Status:** Phase 0 (`tasks/phase-0/`) and Phase 2 (`/analyzer/detect/`) done — Phase 0
+via a synthetic-mix stand-in, not real recordings (see below). Gate metrics are **not
+yet measured** — that requires the real Phase 1 ground-truth set
+(`tests/fixtures/labels.json`), which needs real recorded mixes and hand-labelling
+(tracked in `tasks/phase-1/`, currently blocked on sourcing audio; [`TASKS.md`](TASKS.md)
+tracks the full checklist with checkboxes, and `tasks/phase-*/` has one file per task).
 
 ## Setup
 
@@ -43,6 +45,28 @@ config values (Task 2.17).
 
 **Gate:** not evaluated — Task G is blocked until real numbers exist. Nothing in Step 3
 (scoring/report) or Step 4 (CLI ship) proceeds until all four are green.
+
+### Synthetic smoke test (not the gate)
+
+To exercise the pipeline before real mixes are sourced, `scripts/synth_mixes.py`
+generates synthetic audio with exact, programmatically-known ground truth (no
+copyright exposure, no hand-labelling):
+
+```bash
+python scripts/synth_mixes.py   # writes data/synthetic-mixes/ (gitignored, regenerable)
+python -m analyzer.cli --eval data/synthetic-mixes/labels_synthetic.json
+```
+
+Full write-up: [`notebooks/SYNTHETIC_VALIDATION.md`](notebooks/SYNTHETIC_VALIDATION.md).
+Headline result — hard cuts detect near-perfectly, blends do not:
+
+| Subset | Recall | Precision |
+|---|---|---|
+| Hard-cut mix only | 1.00 | 1.00 |
+| Blend mixes only | 0.17 | 0.07 |
+
+This is a smoke test, not a substitute for the real gate above — do not tune Task
+2.15's thresholds against it.
 
 ## Tests
 

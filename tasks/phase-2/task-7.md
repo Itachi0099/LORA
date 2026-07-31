@@ -1,5 +1,7 @@
 # Task 2.7 — Add Chroma CENS to the feature set
 
+- [x] Done
+
 **Phase:** 2 — Detection to gate (Step 2)
 **Source:** [TASKS.md](../../TASKS.md) · [base.md](../../base.md) §4.1
 **Status:** done

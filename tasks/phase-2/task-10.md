@@ -1,5 +1,7 @@
 # Task 2.10 — `detect/merge.py`: union & confidence
 
+- [x] Done
+
 **Phase:** 2 — Detection to gate (Step 2)
 **Source:** [TASKS.md](../../TASKS.md) · [base.md](../../base.md) §4.2
 **Status:** done

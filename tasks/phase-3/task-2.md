@@ -1,8 +1,10 @@
 # Task 3.2 — Token storage & scope minimization
 
+- [ ] Todo
+
 **Phase:** 3 — Streaming app connectivity (deferred, see [phase-3/README.md](README.md))
 **Source:** User decision 2026-08-01 (full OAuth account linking)
-**Status:** todo
+**Status:** todo — deferred, see phase-3/README.md
 **Depends on:** 3.1
 
 ## Objective

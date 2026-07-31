@@ -1,8 +1,10 @@
 # Task 0.9 — Stress-test the homogeneous worst case
 
+- [x] Done
+
 **Phase:** 0 — Environment & notebook prototype
 **Source:** [TASKS.md](../../TASKS.md) · [base.md](../../base.md) §Known risks 1, §3.3
-**Status:** blocked (needs user-supplied mixes; see notes)
+**Status:** done, inconclusive — see notebooks/SYNTHETIC_VALIDATION.md
 **Depends on:** 0.7, 0.8
 
 ## Objective

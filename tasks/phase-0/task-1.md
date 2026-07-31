@@ -1,5 +1,7 @@
 # Task 0.1 — Set up Python env & pin madmom
 
+- [x] Done
+
 **Phase:** 0 — Environment & notebook prototype
 **Source:** [TASKS.md](../../TASKS.md) · [base.md](../../base.md) §Known risks 5
 **Status:** done

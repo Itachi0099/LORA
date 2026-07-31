@@ -1,5 +1,7 @@
 # Task 0.2 — Verify ffmpeg decode
 
+- [x] Done
+
 **Phase:** 0 — Environment & notebook prototype
 **Source:** [TASKS.md](../../TASKS.md) · [base.md](../../base.md) §4.1
 **Status:** done

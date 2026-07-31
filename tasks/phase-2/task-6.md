@@ -1,5 +1,7 @@
 # Task 2.6 — `features/spectral.py`: band RMS & stereo width
 
+- [x] Done
+
 **Phase:** 2 — Detection to gate (Step 2)
 **Source:** [TASKS.md](../../TASKS.md) · [base.md](../../base.md) §4.1, §3
 **Status:** done

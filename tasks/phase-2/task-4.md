@@ -1,5 +1,7 @@
 # Task 2.4 — `features/timbre.py`: MFCC + spectral contrast
 
+- [x] Done
+
 **Phase:** 2 — Detection to gate (Step 2)
 **Source:** [TASKS.md](../../TASKS.md) · [base.md](../../base.md) §4.1
 **Status:** done

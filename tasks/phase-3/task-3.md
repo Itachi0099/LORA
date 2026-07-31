@@ -1,8 +1,10 @@
 # Task 3.3 — Prototype the OAuth flow standalone
 
+- [ ] Todo
+
 **Phase:** 3 — Streaming app connectivity (deferred, see [phase-3/README.md](README.md))
 **Source:** User decision 2026-08-01 (full OAuth account linking)
-**Status:** todo
+**Status:** todo — deferred, see phase-3/README.md
 **Depends on:** 3.1, 3.2
 
 ## Objective

@@ -13,5 +13,8 @@ ui/node_modules/
 ui/dist/
 ui/tsconfig.tsbuildinfo
 
+# Generated audio (synthetic mixes, real mixes once sourced) — binary, regenerable
+data/
+
 # OS
 .DS_Store

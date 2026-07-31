@@ -1,5 +1,7 @@
 # Task 2.14 — Minimal `--eval` path
 
+- [x] Done
+
 **Phase:** 2 — Detection to gate (Step 2)
 **Source:** [TASKS.md](../../TASKS.md) · [base.md](../../base.md) §6, §Validation
 **Status:** done

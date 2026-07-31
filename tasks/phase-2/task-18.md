@@ -1,8 +1,10 @@
 # Task G — Gate check
 
+- [ ] Blocked
+
 **Phase:** 2 — Detection to gate (Step 2)
 **Source:** [TASKS.md](../../TASKS.md) · [base.md](../../base.md) §Validation
-**Status:** blocked (needs Phase 1 ground-truth set — labels.json)
+**Status:** blocked — depends on 2.17 real numbers
 **Depends on:** 2.17
 
 ## Objective

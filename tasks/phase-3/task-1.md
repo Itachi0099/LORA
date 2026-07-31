@@ -1,8 +1,10 @@
 # Task 3.1 — Decide provider, auth model, and which "linking" feature
 
+- [ ] Todo
+
 **Phase:** 3 — Streaming app connectivity (deferred, see [phase-3/README.md](README.md))
 **Source:** User decision 2026-08-01 (full OAuth account linking) · [base.md](../../base.md) §1 scope
-**Status:** todo
+**Status:** todo — deferred, see phase-3/README.md
 **Depends on:** Phase 2 gate green (see root `README.md` Gate status)
 
 ## Objective

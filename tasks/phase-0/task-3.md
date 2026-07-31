@@ -1,5 +1,7 @@
 # Task 0.3 — Install analysis dependencies
 
+- [x] Done
+
 **Phase:** 0 — Environment & notebook prototype
 **Source:** [TASKS.md](../../TASKS.md) · [base.md](../../base.md) §4
 **Status:** done

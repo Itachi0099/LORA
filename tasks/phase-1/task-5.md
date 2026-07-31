@@ -1,8 +1,10 @@
 # Task 1.5 — Write labels.json
 
+- [ ] Blocked
+
 **Phase:** 1 — Ground truth set
 **Source:** [TASKS.md](../../TASKS.md) · [base.md](../../base.md) §6, §7 Step 1
-**Status:** blocked (needs user-supplied mixes; see notes)
+**Status:** blocked — needs real recorded mixes
 **Depends on:** 1.4
 
 ## Objective

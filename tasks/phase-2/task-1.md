@@ -1,5 +1,7 @@
 # Task 2.1 — Scaffold the repo
 
+- [x] Done
+
 **Phase:** 2 — Detection to gate (Step 2)
 **Source:** [TASKS.md](../../TASKS.md) · [base.md](../../base.md) §6
 **Status:** done
