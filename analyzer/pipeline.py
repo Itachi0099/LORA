@@ -7,6 +7,8 @@ future eval script can call it directly.
 
 from __future__ import annotations
 
+import subprocess
+import warnings
 from pathlib import Path
 
 from analyzer import config, io
@@ -27,7 +29,11 @@ def analyze_mix(path: Path):
     y_mono = io.decode_mono(path)
     try:
         y_stereo = io.decode_stereo(path)
-    except Exception:
+    except subprocess.CalledProcessError as e:
+        warnings.warn(
+            f"stereo decode failed for {path} ({e}); continuing mono-only, "
+            "stereo-width feature will be dropped from the feature matrix."
+        )
         y_stereo = None
 
     features = build_feature_matrix(y_mono, y_stereo)

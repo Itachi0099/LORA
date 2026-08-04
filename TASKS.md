@@ -123,3 +123,15 @@ Goal: build `/analyzer/detect/` (+ its feature and validation dependencies) unti
 Step 3 (loudness/metrics/flags/report — §4.5, §5) and Step 4 (CLI ship, r/DJs post, demand test).
 Track those separately once the gate is green. Demand risks 3 & 4 should be revisited *before* Step 4,
 not after.
+
+## Phase 3 — Streaming app connectivity
+
+Scoped in `tasks/phase-3/` (`README.md` + `task-1.md`–`task-7.md`), originally deferred
+until the Phase 2 gate is green. Task 3.1's provider/scope decision has since been made
+(2026-08-04, see `tasks/phase-3/task-1.md` Notes) — narrower than the OAuth/account-
+linking path that phase was scoped for: read-only track-ID enrichment via `analyzer/identify.py`,
+no user account or OAuth involved. Built ahead of the Phase 2 gate at the requesting
+user's direction (flagged in task-1.md, not silently skipped); stays additive and
+outside the gate computation in `analyzer/eval.py` for exactly that reason. Tasks
+3.2/3.3/3.5/3.6 (OAuth/token/UI wiring) remain unstarted and apply only if a write
+feature or real Spotify OAuth is added later; 3.4 and 3.7 are still open.

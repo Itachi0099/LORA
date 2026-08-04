@@ -21,7 +21,12 @@ Post-set transition analysis for DJ mixes. One recorded mix in, one report out.
 - Library management, tagging, crates
 - Key detection, energy scores, mood labels
 - Two-track "will these mix" comparison
-- Any upload, server, or account
+- Any upload, server, or account, **except:** short (~12s) clips around a detected
+  transition may be sent to a third-party fingerprinting service (AudD) for read-only
+  track identification, opt-in via `AUDD_API_TOKEN` — no user account, OAuth, or
+  streaming-service login involved. See `tasks/phase-3/task-1.md` for the decision
+  record and `analyzer/identify.py`. Playlist export/import and full account linking
+  remain out of scope.
 - GUI
 
 Nothing ships until a CLI run on a real mix produces a transition list that survives listening back.

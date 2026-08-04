@@ -77,4 +77,25 @@ python -m pytest tests/
 Covers detection/merge logic (`test_detect.py`) and phrase-offset arithmetic
 (`test_phrase.py`) against synthetic data — this validates the code is *correct*, not
 that detection *works on real mixes*. Only the gate numbers above answer that.
+
+## Track identification (optional, not gate-scoped)
+
+`analyzer/identify.py` fingerprints short clips around each detected transition via
+[AudD](https://audd.io) and resolves matches to Spotify/Apple Music metadata (title,
+artist, streaming link) — no audio is fetched from any streaming service, since none of
+them expose a full-track-download endpoint; this only pulls metadata for tracks already
+present in your own recorded mix. Best-effort by design: no `AUDD_API_TOKEN`, no match,
+or any request failure all return `None` per-clip rather than raising, so this can never
+break or slow down the core (offline, deterministic) detection pipeline.
+
+This is report enrichment, not a detection metric — it does not and must not feed into
+recall/precision/overlap-error/phrase-offset or the kill gate above.
+
+```bash
+export AUDD_API_TOKEN=...
+python scripts/identify_transitions.py path/to/mix.wav
+```
+
+Standalone script for now; wiring this into `djx analyze --json` output is Step 4 work
+(base.md §6), tracked in `tasks/phase-3/`.
 # LORA

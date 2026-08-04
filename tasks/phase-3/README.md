@@ -1,6 +1,10 @@
 # Phase 3 — Streaming app connectivity (deferred)
 
-**Status: scoped, not started. Do not begin before the Phase 2 gate is green.**
+**Status: Task 3.1 decided 2026-08-04 — narrower than scoped below (enrichment only,
+no OAuth/account linking; see `task-1.md` Notes). Built ahead of the Phase 2 gate at
+the requesting user's direction, flagged there rather than silently skipped. 3.2/3.3/3.5/3.6
+remain not started and apply only if a write feature or real OAuth is added later;
+3.4/3.7 are still open.**
 
 This phase does not exist in [base.md](../../base.md) or [TASKS.md](../../TASKS.md) as
 originally written — base.md's scope section is explicit: *"Out (explicitly, for now):
@@ -49,8 +53,10 @@ strongly here:
 
 ## Task list
 
-- [ ] **3.1** — Decide provider(s), auth grant type, and which of the two "linking"
-  features (enrichment vs. export) is actually being built first.
+- [x] **3.1** — Decide provider(s), auth grant type, and which of the two "linking"
+  features (enrichment vs. export) is actually being built first. **Decided:**
+  enrichment via AudD (fingerprint + Spotify/Apple Music metadata resolution), no
+  OAuth/account linking. See `task-1.md` Notes.
 - [ ] **3.2** — Design token storage (OS keychain via Tauri) and scope minimization
   (read-only search/metadata scopes unless export is in scope).
 - [ ] **3.3** — Prototype the OAuth flow against the single provider chosen in 3.1,
